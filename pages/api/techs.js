@@ -1,5 +1,5 @@
 export default async function handler(req, res) {
-  const apiUrl = process.env.API_URL || 'http://localhost:8000';
+  const apiUrl = process.env.API_URL || 'https://api.kanencoffee.com';
   try {
     const r = await fetch(`${apiUrl}/v1/analytics/brand-profiles`);
     const brands = await r.json();

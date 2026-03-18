@@ -18,35 +18,35 @@ const Dashboard = () => {
 
   const fetchData = async () => {
     try {
-      const summaryRes = await fetch((process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000') + '/v1/dashboard/summary');
+      const summaryRes = await fetch((process.env.NEXT_PUBLIC_API_URL || 'https://api.kanencoffee.com') + '/v1/dashboard/summary');
       const summaryData = await summaryRes.json();
       setSummary(summaryData);
 
-      const stockoutRes = await fetch((process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000') + '/v1/analytics/stockout-alerts');
+      const stockoutRes = await fetch((process.env.NEXT_PUBLIC_API_URL || 'https://api.kanencoffee.com') + '/v1/analytics/stockout-alerts');
       const stockoutData = await stockoutRes.json();
       setStockoutAlerts(stockoutData);
 
-      const velocityRes = await fetch((process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000') + '/v1/analytics/repair-velocity');
+      const velocityRes = await fetch((process.env.NEXT_PUBLIC_API_URL || 'https://api.kanencoffee.com') + '/v1/analytics/repair-velocity');
       const velocityData = await velocityRes.json();
       setRepairVelocity(velocityData);
 
-      const techRes = await fetch((process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000') + '/v1/analytics/brand-profiles');
+      const techRes = await fetch((process.env.NEXT_PUBLIC_API_URL || 'https://api.kanencoffee.com') + '/v1/analytics/brand-profiles');
       const techData = await techRes.json();
       setTechPerformance(techData);
 
-      const brandRes = await fetch((process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000') + '/v1/analytics/brand-profiles');
+      const brandRes = await fetch((process.env.NEXT_PUBLIC_API_URL || 'https://api.kanencoffee.com') + '/v1/analytics/brand-profiles');
       const brandData = await brandRes.json();
       setBrandProfiles(brandData);
 
-      const profitRes = await fetch((process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000') + '/v1/analytics/parts-profit');
+      const profitRes = await fetch((process.env.NEXT_PUBLIC_API_URL || 'https://api.kanencoffee.com') + '/v1/analytics/parts-profit');
       const profitData = await profitRes.json();
       setPartsProfit(profitData);
 
-      const burnRes = await fetch((process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000') + '/v1/analytics/burn-rates');
+      const burnRes = await fetch((process.env.NEXT_PUBLIC_API_URL || 'https://api.kanencoffee.com') + '/v1/analytics/burn-rates');
       const burnData = await burnRes.json();
       setBurnRates(burnData);
 
-      const repeatRes = await fetch((process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000') + '/v1/analytics/repeat-customers');
+      const repeatRes = await fetch((process.env.NEXT_PUBLIC_API_URL || 'https://api.kanencoffee.com') + '/v1/analytics/repeat-customers');
       const repeatData = await repeatRes.json();
       setRepeatCustomers(repeatData);
 
